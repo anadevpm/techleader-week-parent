@@ -1,0 +1,2706 @@
+<!doctype html>
+<html lang="ru" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Неделя Технолидерства · 16-22 июня · бесплатно для родителей</title>
+<meta name="description" content="Семь дней онлайн-эфиров с экспертами технологического образования. Разберем, как выбрать кружок, курс или направление для ребенка без догадок и переплат. Кулибинская карта в подарок.">
+<meta property="og:title" content="Неделя Технолидерства · бесплатно для родителей">
+<meta property="og:description" content="7 дней онлайн с инженерами, преподавателями вузов и наставниками. Прямые ответы на вопросы о технологическом обучении ребенка.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   Неделя Технолидерства · родительский лендинг
+   DS v6 tokens · IBM Plex · multi-layer · parallax · scroll-reveal
+   ============================================================ */
+
+:root {
+  /* Core palette — DS v6 */
+  --cobalt-700: #00307a;
+  --cobalt-600: #003da6;
+  --cobalt-500: #0047ab;
+  --cobalt-400: #337be0;
+  --cobalt-300: #6ba0ec;
+  --cobalt-50:  #e6effa;
+
+  --midnight-900: #00081f;
+  --midnight-700: #00112e;
+  --midnight-500: #001a40;
+  --midnight-400: #1a2c52;
+  --midnight-300: #4a5670;
+  --midnight-200: #8b94a8;
+  --midnight-100: #ccced9;
+
+  /* Cinnabar accent — Кулибинский канон */
+  --cinnabar-700: #a3392a;
+  --cinnabar-600: #c4452f;
+  --cinnabar-500: #d9533b;
+  --cinnabar-400: #e87760;
+  --cinnabar-50:  #fbeae5;
+
+  /* Warm support */
+  --gold-500:  #d4a04a;
+  --gold-300:  #ebc88a;
+  --emerald-500:#10b981;
+  --emerald-50:#e6fbf1;
+
+  /* Paper neutrals */
+  --paper-warm: #faf7f0;
+  --paper-pure: #ffffff;
+  --paper-cool: #f2f4fb;
+  --paper-mist: #e8ecf4;
+
+  --rule: #d8dde8;
+  --rule-soft: #ebedf3;
+
+  /* Type */
+  --serif: 'IBM Plex Serif', Georgia, serif;
+  --sans:  'IBM Plex Sans', system-ui, -apple-system, sans-serif;
+  --mono:  'IBM Plex Mono', ui-monospace, Menlo, monospace;
+
+  /* Spacing */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 16px;
+  --sp-4: 24px;
+  --sp-5: 40px;
+  --sp-6: 64px;
+  --sp-7: 96px;
+  --sp-8: 128px;
+
+  /* Shadows */
+  --sh-card:    0 8px 28px rgba(0, 26, 64, .08);
+  --sh-elevate: 0 24px 56px -8px rgba(0, 26, 64, .20);
+  --sh-float:   0 32px 80px -12px rgba(0, 26, 64, .28);
+  --sh-soft:    0 4px 16px rgba(0, 26, 64, .06);
+
+  --container: 1280px;
+  --r-md: 12px;
+  --r-lg: 20px;
+  --r-xl: 28px;
+  --r-2xl: 40px;
+}
+
+* { box-sizing: border-box; }
+*::selection { background: var(--cinnabar-500); color: #fff; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--midnight-500);
+  background: var(--paper-cool);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+img { display: block; max-width: 100%; }
+button { font-family: inherit; cursor: pointer; }
+
+/* ============ Helpers ============ */
+.kicker {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: .14em;
+  text-transform: lowercase;
+  color: var(--cinnabar-600);
+  margin: 0 0 var(--sp-3);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.kicker::before {
+  content: "";
+  display: inline-block;
+  width: 24px; height: 1px;
+  background: var(--cinnabar-500);
+}
+
+h2 {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: clamp(28px, 3.4vw, 44px);
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  margin: 0 0 var(--sp-4);
+  color: var(--midnight-500);
+}
+
+h3 {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 1.3;
+  margin: 0 0 var(--sp-2);
+  color: var(--midnight-500);
+}
+
+p { margin: 0 0 var(--sp-3); }
+
+.lead {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--midnight-300);
+  max-width: 60ch;
+}
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--sp-4);
+}
+
+/* ============ Topbar ============ */
+.topbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid rgba(216, 221, 232, 0.5);
+  transition: transform .4s ease, background .3s ease;
+}
+.topbar.is-hidden { transform: translateY(-110%); }
+
+.topbar-inner {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 14px var(--sp-4);
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+}
+
+.brand {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 16.5px;
+  letter-spacing: -0.01em;
+  color: var(--midnight-500);
+  text-decoration: none;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+}
+.brand .accent { color: var(--cinnabar-500); }
+
+.brand-meta {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--midnight-300);
+  padding-left: 12px;
+  margin-left: 12px;
+  border-left: 1px solid var(--rule);
+}
+@media (max-width: 720px) {
+  .brand { font-size: 15px; }
+  .brand-meta { display: none; }
+}
+
+/* Desktop nav */
+.topnav {
+  display: none;
+  align-items: center;
+  gap: 4px;
+  margin-left: var(--sp-4);
+}
+.topnav a {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--midnight-500);
+  text-decoration: none;
+  border-radius: 999px;
+  transition: background .2s ease, color .2s ease;
+}
+.topnav a:hover {
+  background: var(--paper-cool);
+  color: var(--cinnabar-600);
+}
+@media (min-width: 1080px) { .topnav { display: inline-flex; } }
+
+.topbar .spacer { flex: 1; }
+
+.topbar .countdown {
+  display: none;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .04em;
+  color: var(--midnight-300);
+}
+.topbar .countdown b {
+  color: var(--cinnabar-600);
+  font-weight: 600;
+  margin: 0 4px;
+}
+@media (min-width: 1080px) { .topbar .countdown { display: inline-flex; align-items: center; gap: 6px; margin-right: 4px; } }
+
+.topbar-cta { padding: 10px 18px; font-size: 13.5px; }
+@media (max-width: 540px) {
+  .topbar-cta { display: none; }
+}
+
+/* Burger */
+.burger {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40px; height: 40px;
+  background: transparent;
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  padding: 0 10px;
+  cursor: pointer;
+  margin-left: 8px;
+  transition: background .2s ease, border-color .2s ease;
+}
+.burger:hover { background: var(--paper-cool); }
+.burger span {
+  display: block;
+  width: 18px; height: 1.6px;
+  background: var(--midnight-500);
+  border-radius: 2px;
+  transition: transform .25s ease, opacity .25s ease;
+  transform-origin: center;
+}
+.burger.is-open { border-color: var(--cinnabar-500); background: var(--cinnabar-50); }
+.burger.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.burger.is-open span:nth-child(2) { opacity: 0; }
+.burger.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+@media (min-width: 1080px) { .burger { display: none; } }
+
+/* Mobile drawer */
+.topnav-mobile {
+  display: none;
+  flex-direction: column;
+  padding: 12px var(--sp-3) 20px;
+  background: rgba(255,255,255,.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-top: 1px solid var(--rule-soft);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .35s ease, padding .35s ease;
+}
+.topnav-mobile.is-open {
+  display: flex;
+  max-height: 480px;
+  padding: 12px var(--sp-3) 20px;
+}
+.topnav-mobile a {
+  padding: 14px 8px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--midnight-500);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule-soft);
+}
+.topnav-mobile a:last-child { border-bottom: none; }
+.topnav-mobile a.btn { justify-content: center; color: #fff; }
+@media (min-width: 1080px) { .topnav-mobile { display: none !important; } }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 22px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 14.5px;
+  letter-spacing: -0.005em;
+  text-decoration: none;
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease, color .18s ease, border-color .18s ease;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: var(--cinnabar-500);
+  color: #fff;
+  box-shadow: 0 6px 20px -4px rgba(217, 83, 59, .45);
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  background: var(--cinnabar-600);
+  box-shadow: 0 12px 32px -6px rgba(217, 83, 59, .55);
+}
+.btn-primary:active { transform: translateY(0); }
+
+.btn-ghost {
+  background: transparent;
+  color: var(--midnight-500);
+  border-color: var(--rule);
+}
+.btn-ghost:hover { background: var(--midnight-500); color: #fff; border-color: var(--midnight-500); }
+
+.btn-ghost-light {
+  background: rgba(255,255,255,.08);
+  color: #fff;
+  border-color: rgba(255,255,255,.18);
+  backdrop-filter: blur(10px);
+}
+.btn-ghost-light:hover { background: rgba(255,255,255,.16); border-color: rgba(255,255,255,.3); }
+
+.btn-lg { padding: 16px 30px; font-size: 15.5px; }
+
+/* ============ HERO — multi-layer parallax ============ */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 120px 0 var(--sp-7);
+  overflow: hidden;
+  isolation: isolate;
+  background: linear-gradient(180deg, var(--midnight-900) 0%, var(--midnight-500) 100%);
+  color: #fff;
+}
+
+/* Layer 1: photo */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  filter: saturate(.85) brightness(.85);
+  will-change: transform;
+  transition: transform .4s cubic-bezier(.22,.61,.36,1);
+}
+
+/* Layer 2: cinematic overlay */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    radial-gradient(120% 80% at 15% 50%, rgba(0, 8, 31, 0.95) 0%, rgba(0, 26, 64, 0.78) 35%, rgba(0, 26, 64, 0.15) 70%, transparent 100%),
+    linear-gradient(180deg, rgba(0, 8, 31, .45) 0%, transparent 35%, rgba(0, 8, 31, .55) 100%);
+}
+@media (max-width: 880px) {
+  .hero-overlay {
+    background:
+      linear-gradient(180deg, rgba(0, 8, 31, 0.55) 0%, rgba(0, 8, 31, 0.85) 50%, rgba(0, 8, 31, 0.95) 100%);
+  }
+}
+
+/* Layer 3: grid mesh */
+.hero-mesh {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background-image:
+    linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(120% 80% at 70% 50%, black 0%, transparent 80%);
+  -webkit-mask-image: radial-gradient(120% 80% at 70% 50%, black 0%, transparent 80%);
+  pointer-events: none;
+}
+
+/* Layer 4: floating glow */
+.hero-glow {
+  position: absolute;
+  z-index: 3;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: .6;
+  pointer-events: none;
+  will-change: transform;
+}
+.hero-glow-a {
+  width: 600px; height: 600px;
+  top: -200px; right: -150px;
+  background: radial-gradient(circle, rgba(217, 83, 59, 0.55) 0%, transparent 70%);
+  animation: float-slow 18s ease-in-out infinite;
+}
+.hero-glow-b {
+  width: 480px; height: 480px;
+  bottom: -100px; left: 10%;
+  background: radial-gradient(circle, rgba(51, 123, 224, 0.45) 0%, transparent 70%);
+  animation: float-slow 22s ease-in-out infinite reverse;
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translate(0,0) scale(1); }
+  33% { transform: translate(40px, -30px) scale(1.05); }
+  66% { transform: translate(-30px, 25px) scale(.95); }
+}
+
+/* Layer 5: content */
+.hero-content {
+  max-width: 680px;
+  text-align: left;
+}
+.hero-content > * { text-align: left; }
+.hero-cta-row { justify-content: flex-start; }
+.hero-trust { justify-content: flex-start; }
+
+.hero .container {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: var(--sp-4);
+}
+.hero-badge .pulse-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--cinnabar-500);
+  box-shadow: 0 0 0 0 rgba(217, 83, 59, .7);
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(217, 83, 59, .7); }
+  70% { box-shadow: 0 0 0 14px rgba(217, 83, 59, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(217, 83, 59, 0); }
+}
+
+.hero h1 {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: clamp(34px, 5.4vw, 64px);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  margin: 0 0 var(--sp-4);
+  color: #fff;
+}
+.hero h1 .hl {
+  position: relative;
+  display: inline-block;
+  color: var(--cinnabar-400);
+  font-style: italic;
+  font-weight: 500;
+}
+.hero h1 .hl::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 6%;
+  height: 8px;
+  background: linear-gradient(90deg, rgba(217, 83, 59, .3) 0%, rgba(217, 83, 59, .55) 50%, rgba(217, 83, 59, .15) 100%);
+  z-index: -1;
+  border-radius: 4px;
+}
+
+.hero p.lead-hero {
+  font-size: clamp(16.5px, 1.7vw, 19px);
+  line-height: 1.55;
+  color: rgba(255,255,255,.82);
+  margin: 0 0 var(--sp-5);
+  max-width: 56ch;
+}
+
+.hero-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-6);
+}
+
+/* ===== HERO COUNTDOWN ===== */
+.hero-countdown {
+  display: inline-flex;
+  align-items: stretch;
+  gap: 0;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 16px;
+  padding: 4px;
+  margin-bottom: var(--sp-5);
+  max-width: 100%;
+  overflow: hidden;
+  flex-wrap: nowrap;
+  box-shadow: 0 12px 32px -8px rgba(0, 0, 0, .3);
+}
+.hero-countdown .cd-cell {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 11px;
+  padding: 12px 22px;
+  text-align: center;
+  min-width: 76px;
+  position: relative;
+  flex: 0 0 auto;
+}
+.hero-countdown .cd-num {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: clamp(26px, 3vw, 36px);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: #fff;
+  display: block;
+  font-variant-numeric: tabular-nums;
+  transition: opacity .15s ease;
+}
+.hero-countdown .cd-num.is-flip { opacity: .25; }
+.hero-countdown .cd-label {
+  display: block;
+  margin-top: 8px;
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+}
+.hero-countdown .cd-sep {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--serif);
+  font-size: 22px;
+  color: var(--cinnabar-400);
+  padding: 0 4px;
+  flex: 0 0 auto;
+  user-select: none;
+  opacity: .65;
+}
+@media (max-width: 560px) {
+  .hero-countdown { border-radius: 13px; padding: 3px; }
+  .hero-countdown .cd-cell { padding: 9px 12px; min-width: 56px; border-radius: 9px; }
+  .hero-countdown .cd-num { font-size: 22px; }
+  .hero-countdown .cd-label { font-size: 9px; letter-spacing: .1em; }
+  .hero-countdown .cd-sep { font-size: 16px; padding: 0 2px; }
+}
+@media (max-width: 380px) {
+  .hero-countdown .cd-cell { padding: 8px 9px; min-width: 48px; }
+  .hero-countdown .cd-num { font-size: 19px; }
+  .hero-countdown .cd-sep { display: none; }
+}
+
+.hero-trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-5);
+  padding-top: var(--sp-4);
+  border-top: 1px solid rgba(255,255,255,.12);
+}
+.hero-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.hero-trust-icon {
+  width: 36px; height: 36px;
+  border-radius: 10px;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.14);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.hero-trust-icon svg { width: 20px; height: 20px; color: var(--cinnabar-400); }
+.hero-trust-text {
+  font-size: 13px;
+  line-height: 1.35;
+  color: rgba(255,255,255,.85);
+}
+.hero-trust-text b { display: block; font-size: 15px; color: #fff; font-weight: 600; margin-bottom: 2px; }
+
+/* Floating dates card */
+.hero-dates-card {
+  position: absolute;
+  z-index: 12;
+  right: 6%;
+  top: 22%;
+  width: 280px;
+  padding: 22px 24px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: var(--r-lg);
+  color: #fff;
+  box-shadow: 0 30px 80px -20px rgba(0, 0, 0, 0.5);
+  animation: float-card 8s ease-in-out infinite;
+  will-change: transform;
+}
+@keyframes float-card {
+  0%, 100% { transform: translateY(0) rotate(-1.5deg); }
+  50% { transform: translateY(-10px) rotate(-2deg); }
+}
+.hero-dates-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--cinnabar-400);
+  margin-bottom: 10px;
+}
+.hero-dates-range {
+  font-family: var(--serif);
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.hero-dates-month {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: rgba(255,255,255,.7);
+  margin-bottom: 18px;
+}
+.hero-dates-divider {
+  height: 1px;
+  background: rgba(255,255,255,.12);
+  margin: 16px 0 14px;
+}
+.hero-dates-foot {
+  font-size: 12.5px;
+  color: rgba(255,255,255,.7);
+  line-height: 1.45;
+}
+.hero-dates-foot b { color: var(--cinnabar-400); font-weight: 600; }
+
+@media (max-width: 1080px) {
+  .hero-dates-card { display: none; }
+}
+
+/* Scroll hint */
+.hero-scroll {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 11;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.5);
+}
+.hero-scroll-line {
+  width: 1px; height: 36px;
+  background: linear-gradient(180deg, transparent, rgba(255,255,255,.5), transparent);
+  animation: scroll-pulse 2.4s ease-in-out infinite;
+}
+@keyframes scroll-pulse {
+  0% { transform: scaleY(0); transform-origin: top; }
+  50% { transform: scaleY(1); transform-origin: top; }
+  51% { transform-origin: bottom; }
+  100% { transform: scaleY(0); transform-origin: bottom; }
+}
+@media (max-width: 880px) { .hero-scroll { display: none; } }
+
+/* ============ PROBLEMS — sympathy section ============ */
+.problems {
+  position: relative;
+  padding: var(--sp-8) 0;
+  background: var(--paper-pure);
+  overflow: hidden;
+}
+.problems::before {
+  content: "";
+  position: absolute;
+  top: -40%;
+  right: -20%;
+  width: 800px; height: 800px;
+  background: radial-gradient(circle, var(--paper-warm) 0%, transparent 60%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.problems-head {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  margin: 0 0 var(--sp-6);
+}
+
+.problems-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--sp-3);
+}
+
+.worry {
+  grid-column: span 4;
+  background: var(--paper-pure);
+  border: 1px solid var(--rule);
+  border-radius: var(--r-lg);
+  padding: var(--sp-5) var(--sp-4);
+  position: relative;
+  overflow: hidden;
+  transition: transform .35s cubic-bezier(.22,.61,.36,1), border-color .25s, box-shadow .25s;
+  cursor: default;
+}
+.worry:hover {
+  transform: translateY(-6px);
+  border-color: var(--cinnabar-400);
+  box-shadow: var(--sh-card);
+}
+.worry::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0;
+  width: 100%; height: 3px;
+  background: linear-gradient(90deg, var(--cinnabar-500), transparent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .35s ease;
+}
+.worry:hover::before { transform: scaleX(1); }
+.worry-quote {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--midnight-500);
+  margin: 0 0 var(--sp-3);
+  position: relative;
+  padding-left: 14px;
+  border-left: 2px solid var(--cinnabar-500);
+}
+.worry-body {
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--midnight-300);
+  margin: 0;
+}
+
+.worry.wide {
+  grid-column: span 8;
+  background: linear-gradient(135deg, var(--midnight-500), var(--midnight-700));
+  color: #fff;
+  border-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.worry.wide::before { background: linear-gradient(90deg, var(--cinnabar-500), var(--gold-500)); transform: scaleX(1); }
+.worry.wide .worry-quote { color: #fff; border-color: var(--cinnabar-500); font-size: 24px; }
+.worry.wide .worry-body { color: rgba(255,255,255,.7); font-size: 15.5px; }
+.worry.wide:hover { transform: translateY(-6px); }
+
+@media (max-width: 880px) {
+  .worry, .worry.wide { grid-column: span 12; }
+}
+
+/* ============ PROMISE — week as solution ============ */
+.promise {
+  position: relative;
+  padding: var(--sp-8) 0;
+  background:
+    linear-gradient(180deg, var(--paper-pure) 0%, var(--paper-cool) 100%);
+  overflow: hidden;
+}
+
+.promise-head {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-6);
+  align-items: end;
+  margin-bottom: var(--sp-7);
+}
+@media (max-width: 880px) { .promise-head { grid-template-columns: 1fr; } }
+
+.promise-head h2 { margin-bottom: 0; }
+
+.promise-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--sp-3);
+}
+@media (max-width: 1080px) { .promise-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .promise-grid { grid-template-columns: 1fr; } }
+
+.solve {
+  background: var(--paper-pure);
+  border-radius: var(--r-lg);
+  padding: var(--sp-5) var(--sp-4) var(--sp-4);
+  border: 1px solid var(--rule);
+  position: relative;
+  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+.solve:hover {
+  transform: translateY(-4px);
+  border-color: var(--cobalt-400);
+  box-shadow: var(--sh-card);
+}
+.solve-num {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .12em;
+  color: var(--cobalt-500);
+  margin-bottom: var(--sp-3);
+}
+.solve-icon {
+  width: 48px; height: 48px;
+  border-radius: 12px;
+  background: var(--cobalt-50);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: var(--sp-3);
+}
+.solve-icon svg { width: 24px; height: 24px; color: var(--cobalt-500); }
+.solve h3 { font-size: 19px; margin-bottom: 8px; }
+.solve p { font-size: 14.5px; line-height: 1.5; color: var(--midnight-300); margin: 0; }
+
+/* ============ PROGRAM — week schedule preview ============ */
+.program {
+  position: relative;
+  padding: var(--sp-8) 0;
+  background: var(--midnight-500);
+  color: #fff;
+  overflow: hidden;
+}
+.program::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(800px 400px at 10% 0%, rgba(217, 83, 59, .15) 0%, transparent 60%),
+    radial-gradient(600px 400px at 90% 100%, rgba(51, 123, 224, .18) 0%, transparent 60%);
+  pointer-events: none;
+}
+.program::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(60% 80% at 50% 50%, black 0%, transparent 90%);
+  -webkit-mask-image: radial-gradient(60% 80% at 50% 50%, black 0%, transparent 90%);
+  pointer-events: none;
+}
+
+.program-inner { position: relative; z-index: 1; }
+
+.program-head {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto var(--sp-7);
+}
+.program-head .kicker { color: var(--cinnabar-400); }
+.program-head h2 { color: #fff; }
+.program-head .lead { color: rgba(255,255,255,.7); margin: 0 auto; }
+
+.program-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+@media (max-width: 1080px) { .program-days { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .program-days { grid-template-columns: 1fr; } }
+
+.day {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--r-md);
+  padding: var(--sp-3) var(--sp-3) var(--sp-4);
+  transition: transform .3s ease, background .3s ease, border-color .3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.day:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--cinnabar-400);
+  transform: translateY(-4px);
+}
+.day::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--cinnabar-500);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .35s ease;
+}
+.day:hover::before { transform: scaleX(1); }
+
+.day-date {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .08em;
+  color: var(--cinnabar-400);
+  margin-bottom: 8px;
+}
+.day-num {
+  font-family: var(--serif);
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1;
+  color: #fff;
+  margin-bottom: 4px;
+}
+.day-weekday {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .06em;
+  color: rgba(255,255,255,.5);
+  margin-bottom: var(--sp-3);
+  text-transform: lowercase;
+}
+.day-topic {
+  font-size: 14px;
+  line-height: 1.4;
+  color: rgba(255,255,255,.92);
+  font-weight: 500;
+  margin-bottom: var(--sp-3);
+  min-height: 56px;
+}
+.day-meta {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: .04em;
+  color: rgba(255,255,255,.5);
+  padding-top: 12px;
+  border-top: 1px solid rgba(255,255,255,.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.program-cta {
+  text-align: center;
+  margin-top: var(--sp-6);
+}
+.program-cta .btn { background: #fff; color: var(--midnight-500); }
+.program-cta .btn:hover { background: var(--cinnabar-500); color: #fff; box-shadow: 0 12px 32px -6px rgba(217, 83, 59, .55); }
+
+/* ============ KULIBIN — multi-layer 3D card ============ */
+.kulibin {
+  position: relative;
+  padding: var(--sp-8) 0;
+  background: linear-gradient(180deg, var(--paper-cool) 0%, var(--paper-warm) 100%);
+  overflow: hidden;
+}
+.kulibin::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 80% 20%, rgba(217, 83, 59, .07) 0%, transparent 50%),
+    radial-gradient(circle at 20% 80%, rgba(0, 71, 171, .05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.kulibin-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: var(--sp-7);
+  align-items: center;
+}
+@media (max-width: 1080px) {
+  .kulibin-grid { grid-template-columns: 1fr; gap: var(--sp-6); }
+}
+
+.kulibin-text { z-index: 2; }
+.kulibin-text h2 { font-size: clamp(28px, 3.4vw, 42px); }
+
+.kulibin-benefits {
+  list-style: none;
+  margin: var(--sp-5) 0 var(--sp-5);
+  padding: 0;
+  display: grid;
+  gap: 18px;
+}
+.kulibin-benefit {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+.benefit-num {
+  width: 36px; height: 36px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: var(--cinnabar-50);
+  color: var(--cinnabar-600);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--mono);
+  font-weight: 600;
+  font-size: 14px;
+  border: 1px solid rgba(217, 83, 59, .25);
+}
+.benefit-body { padding-top: 6px; }
+.benefit-body b {
+  display: block;
+  font-family: var(--serif);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--midnight-500);
+  margin-bottom: 4px;
+}
+.benefit-body span {
+  font-size: 14.5px;
+  line-height: 1.5;
+  color: var(--midnight-300);
+}
+
+/* The 3D card stage */
+.kulibin-stage {
+  position: relative;
+  perspective: 1800px;
+  perspective-origin: 50% 50%;
+  min-height: 540px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 560px) { .kulibin-stage { min-height: 360px; } }
+
+.kulibin-card {
+  position: relative;
+  width: min(540px, 96%);
+  aspect-ratio: 620 / 349;
+  border-radius: 16px;
+  transform-style: preserve-3d;
+  transform: rotateY(-14deg) rotateX(8deg);
+  transition: transform .8s cubic-bezier(.22,.61,.36,1);
+  will-change: transform;
+  filter:
+    drop-shadow(0 60px 80px rgba(0, 0, 0, 0.35))
+    drop-shadow(0 20px 40px rgba(0, 26, 64, 0.25));
+}
+.kulibin-stage:hover .kulibin-card { transform: rotateY(-4deg) rotateX(2deg) translateZ(40px); }
+
+.kulibin-card-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 16px;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* Holographic shimmer overlay on top of canonical SVG */
+.kulibin-card-holo {
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  background:
+    linear-gradient(120deg,
+      transparent 30%,
+      rgba(255, 255, 255, 0.10) 45%,
+      rgba(217, 83, 59, 0.14) 50%,
+      rgba(212, 160, 74, 0.16) 55%,
+      transparent 70%);
+  mix-blend-mode: screen;
+  animation: holo-shift 7s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes holo-shift {
+  0%, 100% { transform: translateX(-25%) translateY(-10%); opacity: .35; }
+  50% { transform: translateX(25%) translateY(10%); opacity: .75; }
+}
+
+/* Subtle highlight ring on hover */
+.kulibin-card-glow {
+  position: absolute;
+  inset: -40px;
+  border-radius: 28px;
+  background: radial-gradient(circle at 50% 50%, rgba(217, 83, 59, .25), transparent 60%);
+  opacity: 0;
+  transition: opacity .5s ease;
+  pointer-events: none;
+  z-index: -1;
+}
+.kulibin-stage:hover .kulibin-card-glow { opacity: 1; }
+
+/* Floating bonus chips around card */
+.bonus-chip {
+  position: absolute;
+  z-index: 5;
+  background: var(--paper-pure);
+  border-radius: 14px;
+  padding: 12px 16px;
+  box-shadow: var(--sh-elevate);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--rule-soft);
+  will-change: transform;
+}
+.bonus-chip-icon {
+  width: 28px; height: 28px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+}
+.bonus-chip-icon svg { width: 16px; height: 16px; }
+.bonus-chip-amount {
+  font-family: var(--serif);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--midnight-500);
+}
+.bonus-chip-label {
+  display: block;
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: .06em;
+  color: var(--midnight-300);
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+.bonus-chip-a {
+  top: 6%;
+  right: 4%;
+  animation: chip-float-a 7s ease-in-out infinite;
+}
+.bonus-chip-a .bonus-chip-icon { background: var(--cinnabar-50); color: var(--cinnabar-600); }
+
+.bonus-chip-b {
+  bottom: 8%;
+  left: 2%;
+  animation: chip-float-b 9s ease-in-out infinite;
+}
+.bonus-chip-b .bonus-chip-icon { background: var(--cobalt-50); color: var(--cobalt-500); }
+
+.bonus-chip-c {
+  top: 38%;
+  right: -2%;
+  animation: chip-float-c 8s ease-in-out infinite;
+}
+.bonus-chip-c .bonus-chip-icon { background: var(--emerald-50); color: var(--emerald-500); }
+
+@keyframes chip-float-a {
+  0%, 100% { transform: translateY(0) rotate(2deg); }
+  50% { transform: translateY(-14px) rotate(3deg); }
+}
+@keyframes chip-float-b {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-18px) rotate(-3deg); }
+}
+@keyframes chip-float-c {
+  0%, 100% { transform: translate(0,0) rotate(-3deg); }
+  50% { transform: translate(8px,-10px) rotate(-1deg); }
+}
+
+@media (max-width: 560px) {
+  .bonus-chip-a { top: 0; right: 0; }
+  .bonus-chip-b { bottom: 0; left: 0; }
+  .bonus-chip-c { display: none; }
+  .bonus-chip { padding: 9px 12px; }
+  .bonus-chip-amount { font-size: 13px; }
+}
+
+/* Floating earn particles rising up */
+.kulibin-particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.particle {
+  position: absolute;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--cinnabar-500);
+  opacity: 0;
+  will-change: transform, opacity;
+}
+.particle.p1 { left: 22%; bottom: 24%; animation: rise 6s ease-in 0s infinite; }
+.particle.p2 { left: 48%; bottom: 28%; animation: rise 7s ease-in 1.2s infinite; background: var(--gold-500); }
+.particle.p3 { left: 70%; bottom: 22%; animation: rise 8s ease-in 2.4s infinite; background: var(--cobalt-400); }
+.particle.p4 { left: 30%; bottom: 30%; animation: rise 6.5s ease-in 3.6s infinite; background: var(--emerald-500); }
+.particle.p5 { left: 60%; bottom: 26%; animation: rise 7.5s ease-in 4.8s infinite; }
+@keyframes rise {
+  0%   { opacity: 0; transform: translateY(0) scale(.8); }
+  10%  { opacity: 1; }
+  90%  { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-260px) scale(.4); }
+}
+
+/* ============ ROADMAP — 5 steps with animated line ============ */
+.roadmap {
+  position: relative;
+  padding: var(--sp-8) 0;
+  background: var(--paper-pure);
+}
+
+.roadmap-head {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto var(--sp-7);
+}
+
+.roadmap-track {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--sp-3);
+}
+@media (max-width: 1080px) { .roadmap-track { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .roadmap-track { grid-template-columns: 1fr; } }
+
+.roadmap-line {
+  position: absolute;
+  top: 32px;
+  left: 6%;
+  right: 6%;
+  height: 2px;
+  background: var(--rule);
+  z-index: 0;
+}
+.roadmap-line::after {
+  content: "";
+  position: absolute;
+  left: 0; top: 0;
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--cinnabar-500), var(--cinnabar-400));
+  transition: width 1.4s cubic-bezier(.22,.61,.36,1);
+}
+.roadmap.is-visible .roadmap-line::after { width: 100%; }
+
+@media (max-width: 1080px) { .roadmap-line { display: none; } }
+
+.step {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 0 var(--sp-2);
+}
+.step-circle {
+  width: 64px; height: 64px;
+  margin: 0 auto var(--sp-3);
+  border-radius: 50%;
+  background: var(--paper-pure);
+  border: 2px solid var(--rule);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--midnight-300);
+  transition: all .3s ease;
+  position: relative;
+}
+.step:hover .step-circle {
+  transform: scale(1.08);
+  border-color: var(--cinnabar-500);
+  color: var(--cinnabar-600);
+  box-shadow: 0 8px 24px -6px rgba(217, 83, 59, .4);
+}
+.step.is-first .step-circle {
+  background: var(--cinnabar-500);
+  border-color: var(--cinnabar-500);
+  color: #fff;
+  box-shadow: 0 8px 24px -6px rgba(217, 83, 59, .5);
+}
+.step h4 {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 17px;
+  margin: 0 0 6px;
+  color: var(--midnight-500);
+}
+.step p {
+  font-size: 13.5px;
+  line-height: 1.45;
+  color: var(--midnight-300);
+  margin: 0;
+}
+
+/* ============ EXPERTS ============ */
+.experts {
+  position: relative;
+  padding: var(--sp-8) 0;
+  background: var(--paper-cool);
+}
+
+.experts-head {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto var(--sp-6);
+}
+
+.experts-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--sp-3);
+}
+@media (max-width: 1080px) { .experts-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .experts-grid { grid-template-columns: 1fr; } }
+
+.expert {
+  background: var(--paper-pure);
+  border-radius: var(--r-lg);
+  padding: var(--sp-4);
+  border: 1px solid var(--rule);
+  transition: transform .3s ease, box-shadow .3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.expert:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--sh-card);
+}
+
+.expert-avatar {
+  width: 64px; height: 64px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--cobalt-500), var(--cinnabar-500));
+  display: flex; align-items: center; justify-content: center;
+  color: #fff;
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 700;
+  position: relative;
+}
+.expert-avatar::after {
+  content: "";
+  position: absolute;
+  right: -4px; bottom: -4px;
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  background: var(--emerald-500);
+  border: 3px solid #fff;
+}
+
+.expert h3 { font-size: 17px; margin: 0; }
+.expert-role {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  letter-spacing: .04em;
+  color: var(--cinnabar-600);
+  margin-top: 4px;
+}
+.expert p {
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--midnight-300);
+  margin: 0;
+  flex: 1;
+}
+.expert-tag {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: .04em;
+  padding: 4px 10px;
+  background: var(--cobalt-50);
+  color: var(--cobalt-600);
+  border-radius: 999px;
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+/* ============ FAQ ============ */
+.faq {
+  position: relative;
+  padding: var(--sp-8) 0;
+  background: var(--paper-pure);
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: var(--sp-6);
+}
+@media (max-width: 880px) { .faq-grid { grid-template-columns: 1fr; } }
+
+.faq-head h2 { margin-bottom: var(--sp-3); }
+.faq-head p { font-size: 16px; color: var(--midnight-300); }
+
+.faq-list { border-top: 1px solid var(--rule); }
+
+.faq-item { border-bottom: 1px solid var(--rule); }
+.faq-q {
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 22px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  font-family: var(--serif);
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--midnight-500);
+  text-align: left;
+  cursor: pointer;
+}
+.faq-q-plus {
+  width: 28px; height: 28px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 1px solid var(--rule);
+  display: flex; align-items: center; justify-content: center;
+  position: relative;
+  transition: all .3s ease;
+}
+.faq-q-plus::before, .faq-q-plus::after {
+  content: "";
+  position: absolute;
+  background: var(--midnight-500);
+  transition: transform .3s ease;
+}
+.faq-q-plus::before { width: 10px; height: 1.5px; }
+.faq-q-plus::after { width: 1.5px; height: 10px; }
+.faq-item.is-open .faq-q-plus {
+  background: var(--cinnabar-500);
+  border-color: var(--cinnabar-500);
+}
+.faq-item.is-open .faq-q-plus::before { background: #fff; }
+.faq-item.is-open .faq-q-plus::after { transform: rotate(90deg); background: #fff; }
+
+.faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .4s ease;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--midnight-300);
+}
+.faq-a-inner { padding: 0 0 22px; max-width: 64ch; }
+.faq-item.is-open .faq-a { max-height: 300px; }
+
+/* ============ FINAL CTA ============ */
+.final {
+  position: relative;
+  padding: var(--sp-8) 0;
+  background: var(--paper-cool);
+}
+
+.final-card {
+  position: relative;
+  background: linear-gradient(135deg, var(--midnight-700) 0%, var(--midnight-500) 50%, var(--cobalt-700) 100%);
+  border-radius: var(--r-2xl);
+  padding: clamp(40px, 6vw, 80px);
+  overflow: hidden;
+  color: #fff;
+  box-shadow: var(--sh-float);
+  text-align: center;
+}
+
+.final-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(600px 400px at 20% 0%, rgba(217, 83, 59, .25) 0%, transparent 50%),
+    radial-gradient(500px 300px at 90% 100%, rgba(212, 160, 74, .15) 0%, transparent 50%);
+  pointer-events: none;
+}
+.final-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(70% 80% at 50% 50%, black 0%, transparent 90%);
+  -webkit-mask-image: radial-gradient(70% 80% at 50% 50%, black 0%, transparent 90%);
+  pointer-events: none;
+}
+
+.final-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.final-card .kicker { color: var(--cinnabar-400); justify-content: center; }
+.final-card .kicker::before { background: var(--cinnabar-400); }
+.final-card h2 {
+  font-size: clamp(32px, 4.4vw, 56px);
+  color: #fff;
+  margin-bottom: var(--sp-4);
+}
+.final-card h2 .hl {
+  color: var(--cinnabar-400);
+  font-style: italic;
+  font-weight: 500;
+}
+.final-card .lead { color: rgba(255,255,255,.8); margin: 0 auto var(--sp-5); }
+
+.final-bullets {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px 32px;
+  max-width: 540px;
+  margin: 0 auto var(--sp-5);
+  text-align: left;
+}
+@media (max-width: 560px) { .final-bullets { grid-template-columns: 1fr; max-width: 360px; } }
+
+.final-bullets li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  color: rgba(255,255,255,.92);
+  list-style: none;
+}
+.final-bullets svg {
+  width: 18px; height: 18px;
+  color: var(--cinnabar-400);
+  flex-shrink: 0;
+}
+.final-bullets ul { padding: 0; margin: 0; }
+
+.final-cta-row {
+  display: flex;
+  justify-content: center;
+  gap: var(--sp-3);
+  flex-wrap: wrap;
+}
+
+.final-foot {
+  margin-top: var(--sp-5);
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .04em;
+  color: rgba(255,255,255,.5);
+}
+
+/* ============ Footer ============ */
+.footer {
+  background: var(--midnight-900);
+  color: rgba(255,255,255,.65);
+  padding: var(--sp-6) 0 var(--sp-4);
+  font-size: 13.5px;
+}
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--sp-4);
+  flex-wrap: wrap;
+}
+.footer-brand .brand { color: #fff; font-size: 19px; }
+.footer-brand p { color: rgba(255,255,255,.5); font-size: 13px; max-width: 28ch; margin-top: 8px; }
+.footer-links {
+  display: flex;
+  gap: var(--sp-4);
+}
+.footer-links a { color: rgba(255,255,255,.65); text-decoration: none; }
+.footer-links a:hover { color: #fff; }
+.footer-copy {
+  margin-top: var(--sp-5);
+  padding-top: var(--sp-3);
+  border-top: 1px solid rgba(255,255,255,.06);
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .06em;
+  color: rgba(255,255,255,.35);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* ============ Mobile sticky CTA ============ */
+.mobile-cta {
+  display: none;
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  z-index: 90;
+  background: rgba(255,255,255,.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid var(--rule);
+  padding: 12px var(--sp-3) calc(12px + env(safe-area-inset-bottom));
+  transform: translateY(100%);
+  transition: transform .4s ease;
+}
+.mobile-cta.is-visible { transform: translateY(0); }
+.mobile-cta .btn { width: 100%; padding: 14px 22px; }
+@media (max-width: 880px) { .mobile-cta { display: block; } }
+
+/* ============ Reveal animation ============ */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity .8s cubic-bezier(.22,.61,.36,1), transform .8s cubic-bezier(.22,.61,.36,1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1 { transition-delay: .1s; }
+.reveal-delay-2 { transition-delay: .2s; }
+.reveal-delay-3 { transition-delay: .3s; }
+.reveal-delay-4 { transition-delay: .4s; }
+.reveal-delay-5 { transition-delay: .5s; }
+.reveal-delay-6 { transition-delay: .6s; }
+.reveal-delay-7 { transition-delay: .7s; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+  .reveal { opacity: 1; transform: none; }
+}
+
+/* ============================================================
+   RESPONSIVE POLISH LAYER
+   Tablet (≤1080) · Tablet-portrait (≤880) · Mobile (≤640) · Small (≤400)
+   ============================================================ */
+
+/* === Tablet landscape & small desktop (≤1080px) === */
+@media (max-width: 1080px) {
+  .problems { padding: var(--sp-7) 0; }
+  .promise, .program, .kulibin, .roadmap, .experts, .faq, .final { padding: var(--sp-7) 0; }
+  h2 { font-size: clamp(26px, 3.4vw, 38px); }
+  .hero h1 { font-size: clamp(34px, 5vw, 56px); }
+  .container { padding: 0 var(--sp-4); }
+  .kulibin-grid { gap: var(--sp-5); }
+  .kulibin-stage { min-height: 480px; }
+  .roadmap-track { gap: var(--sp-4) var(--sp-3); }
+}
+
+/* === Tablet portrait & large mobile (≤880px) === */
+@media (max-width: 880px) {
+  /* Section padding reduction */
+  .problems, .promise, .program, .kulibin, .roadmap, .experts, .faq, .final {
+    padding: var(--sp-6) 0;
+  }
+
+  /* Typography */
+  h2 { font-size: clamp(24px, 4.4vw, 32px); margin-bottom: var(--sp-3); }
+  h3 { font-size: 19px; }
+  .lead { font-size: 16px; }
+  .kicker { font-size: 11px; }
+
+  /* Hero */
+  .hero { padding: 100px 0 var(--sp-6); min-height: auto; }
+  .hero h1 { font-size: clamp(30px, 6vw, 44px); line-height: 1.08; }
+  .hero p.lead-hero { font-size: 16px; }
+  .hero-cta-row { gap: 10px; }
+  .hero-trust { gap: var(--sp-3) var(--sp-4); padding-top: var(--sp-3); margin-top: var(--sp-4) !important; }
+  .hero-trust-item { gap: 10px; }
+  .hero-trust-icon { width: 32px; height: 32px; }
+  .hero-trust-text { font-size: 12.5px; }
+  .hero-trust-text b { font-size: 14px; }
+
+  /* Problems grid */
+  .problems-grid { gap: var(--sp-3); }
+  .worry { padding: 26px 22px; }
+  .worry-quote { font-size: 17px; }
+  .worry.wide .worry-quote { font-size: 20px; }
+
+  /* Promise */
+  .promise-head { margin-bottom: var(--sp-5); }
+  .solve { padding: 26px 22px; }
+
+  /* Program */
+  .program-head { margin-bottom: var(--sp-5); }
+  .day { padding: 18px 18px 22px; }
+  .day-topic { min-height: auto; }
+  .program-cta { margin-top: var(--sp-5); }
+
+  /* Kulibin */
+  .kulibin-grid { grid-template-columns: 1fr; gap: var(--sp-5); }
+  .kulibin-stage { min-height: 420px; order: -1; }
+  .kulibin-card { width: min(420px, 100%); }
+  .kulibin-benefits { margin: var(--sp-4) 0; gap: 14px; }
+  .benefit-num { width: 32px; height: 32px; font-size: 13px; }
+  .benefit-body b { font-size: 16px; }
+  .benefit-body span { font-size: 13.5px; }
+
+  /* Roadmap */
+  .roadmap-track { grid-template-columns: repeat(2, 1fr); gap: var(--sp-4); }
+  .step-circle { width: 52px; height: 52px; font-size: 19px; }
+  .step h4 { font-size: 16px; }
+
+  /* Experts */
+  .experts-grid { gap: var(--sp-3); }
+  .expert { padding: 22px; }
+  .expert-avatar { width: 56px; height: 56px; font-size: 19px; }
+
+  /* FAQ */
+  .faq-grid { gap: var(--sp-4); }
+  .faq-q { font-size: 16.5px; padding: 18px 0; }
+  .faq-q-plus { width: 26px; height: 26px; }
+
+  /* Final */
+  .final-card { padding: 36px 28px; border-radius: var(--r-xl); }
+  .final-card h2 { font-size: clamp(26px, 5vw, 36px); }
+  .final-bullets { gap: 12px 24px; }
+
+  /* CTAs touch-friendly */
+  .btn { padding: 13px 22px; font-size: 14px; }
+  .btn-lg { padding: 14px 26px; font-size: 15px; }
+
+  /* Footer */
+  .footer { padding: var(--sp-5) 0 var(--sp-3); }
+  .footer-inner { flex-direction: column; gap: var(--sp-3); align-items: flex-start; }
+  .footer-links { flex-wrap: wrap; gap: var(--sp-3); }
+}
+
+/* === Mobile (≤640px) === */
+@media (max-width: 640px) {
+  .container { padding: 0 var(--sp-3); }
+
+  /* Section padding */
+  .problems, .promise, .program, .kulibin, .roadmap, .experts, .faq, .final {
+    padding: var(--sp-5) 0;
+  }
+
+  /* Topbar */
+  .topbar-inner { padding: 12px var(--sp-3); gap: 8px; }
+  .brand { font-size: 14.5px; }
+
+  /* Hero */
+  .hero { padding: 92px 0 var(--sp-5); }
+  .hero-content { max-width: 100%; }
+  .hero h1 { font-size: clamp(26px, 7vw, 36px); letter-spacing: -0.02em; }
+  .hero-badge { padding: 6px 12px; font-size: 11px; }
+  .hero p.lead-hero { font-size: 15.5px; }
+  .hero-trust { flex-direction: column; align-items: flex-start; gap: 14px; }
+  .hero-cta-row .btn { width: 100%; }
+
+  /* Problems */
+  .worry { padding: 22px 18px; }
+  .worry-quote { font-size: 16px; padding-left: 12px; }
+  .worry-body { font-size: 13.5px; }
+  .worry.wide { padding: 24px 20px; }
+  .worry.wide .worry-quote { font-size: 18px; }
+
+  /* Promise */
+  .solve { padding: 22px 18px; }
+  .solve-icon { width: 42px; height: 42px; }
+  .solve-icon svg { width: 22px; height: 22px; }
+
+  /* Program */
+  .day { padding: 16px 16px 18px; }
+  .day-num { font-size: 24px; }
+  .day-topic { font-size: 13.5px; }
+
+  /* Kulibin */
+  .kulibin-text h2 { font-size: clamp(24px, 6vw, 32px); }
+  .kulibin-stage { min-height: 320px; }
+  .kulibin-card { width: 92%; }
+
+  /* Roadmap */
+  .roadmap-track { grid-template-columns: 1fr; gap: var(--sp-3); }
+  .step { display: flex; align-items: flex-start; gap: 16px; text-align: left; }
+  .step-circle { margin: 0; flex-shrink: 0; width: 48px; height: 48px; font-size: 17px; }
+  .step .space-y-2, .step > div:last-child { flex: 1; }
+  .step h4 { font-size: 15.5px; }
+  .step p { font-size: 13.5px; }
+
+  /* Experts */
+  .expert { padding: 20px; gap: 12px; }
+
+  /* FAQ */
+  .faq-q { font-size: 15.5px; padding: 16px 0; gap: 12px; }
+  .faq-a { font-size: 14px; }
+
+  /* Final */
+  .final-card { padding: 28px 22px; border-radius: 22px; }
+  .final-card h2 { font-size: clamp(22px, 6vw, 32px); }
+  .final-card .lead { font-size: 15px; }
+  .final-bullets { font-size: 14px; max-width: 280px; }
+  .final-bullets li { font-size: 14px; }
+
+  /* Mobile sticky CTA */
+  .mobile-cta { padding: 10px var(--sp-3) calc(10px + env(safe-area-inset-bottom)); }
+  .mobile-cta .btn { font-size: 14px; padding: 13px 18px; }
+}
+
+/* === Small mobile (≤400px) === */
+@media (max-width: 400px) {
+  .topbar-inner { padding: 10px var(--sp-3); }
+  .brand { font-size: 13.5px; }
+  .hero { padding: 84px 0 var(--sp-4); }
+  .hero-badge { font-size: 10.5px; padding: 5px 10px; gap: 8px; }
+  .hero h1 { font-size: clamp(22px, 7.2vw, 30px); }
+  .hero p.lead-hero { font-size: 14.5px; }
+  .worry { padding: 18px 16px; }
+  .final-card { padding: 24px 18px; }
+  .day-num { font-size: 22px; }
+  .kulibin-stage { min-height: 280px; }
+  .container { padding: 0 var(--sp-3); }
+}
+
+/* === Touch device — bigger tap targets === */
+@media (hover: none) and (pointer: coarse) {
+  .btn, .faq-q, .topnav-mobile a, .day, .worry, .solve, .step, .expert, .fmt, .role, .who { min-height: 44px; }
+  .faq-q { padding: 20px 0; }
+  /* Disable hover transforms on touch (they get stuck after tap) */
+  .worry:hover, .solve:hover, .day:hover, .expert:hover, .role:hover, .who:hover, .fmt:hover { transform: none; }
+}
+
+/* === Landscape phone === */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero { min-height: auto; padding: 80px 0 var(--sp-5); }
+  .hero h1 { font-size: clamp(24px, 5vw, 36px); }
+  .hero p.lead-hero { font-size: 14.5px; }
+  .hero-scroll { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============ TOPBAR ============ -->
+<header class="topbar" id="topbar">
+  <div class="topbar-inner">
+    <a href="#" class="brand">Платформа&nbsp;Технолидерства<span class="accent">.</span></a>
+
+    <nav class="topnav" aria-label="Разделы лендинга">
+      <a href="#problems">Зачем</a>
+      <a href="#program">Программа</a>
+      <a href="#card">Карта</a>
+      <a href="#faq">Вопросы</a>
+    </nav>
+
+    <span class="spacer"></span>
+    <span class="countdown" id="countdown">До старта <b>—</b> дней</span>
+    <a href="#register" class="btn btn-primary topbar-cta">Зарегистрироваться</a>
+
+    <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <!-- Mobile drawer -->
+  <nav class="topnav-mobile" id="topnavMobile" aria-label="Мобильное меню">
+    <a href="#problems">Зачем родителю</a>
+    <a href="#program">Программа недели</a>
+    <a href="#card">Кулибинская карта</a>
+    <a href="#roadmap">Как это работает</a>
+    <a href="#faq">Частые вопросы</a>
+    <a href="#register" class="btn btn-primary" style="margin-top: 12px;">Зарегистрироваться</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-bg" id="heroBg">
+    <img src="screen.png" alt="Семья изучает онлайн-программу обучения" loading="eager">
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-mesh"></div>
+  <div class="hero-glow hero-glow-a" id="heroGlowA"></div>
+  <div class="hero-glow hero-glow-b" id="heroGlowB"></div>
+
+  <!-- Floating dates -->
+  <aside class="hero-dates-card" id="heroDates">
+    <div class="hero-dates-label">Старт онлайн-эфиров</div>
+    <div class="hero-dates-range">16 — 22</div>
+    <div class="hero-dates-month">июня 2026</div>
+    <div class="hero-dates-divider"></div>
+    <div class="hero-dates-foot">7 дней эфиров · 14 экспертов · <b>+100 баллов</b> приветственно на карту</div>
+  </aside>
+
+  <div class="container">
+   <div class="hero-content">
+    <div class="hero-badge reveal">
+      <span class="pulse-dot"></span>
+      Неделя Технолидерства · бесплатно
+    </div>
+
+    <h1 class="reveal reveal-delay-1">
+      Вы не обязаны разбираться<br>
+      в технологическом образовании <span class="hl">в одиночку</span>
+    </h1>
+
+    <p class="lead-hero reveal reveal-delay-2">
+      Семь дней онлайн-эфиров с инженерами, преподавателями вузов и наставниками. Разберем, как выбрать направление, кружок и курс для ребенка — без догадок, без переплат и без давления.
+    </p>
+
+    <div class="hero-countdown reveal reveal-delay-3" id="heroCountdown" role="timer" aria-live="polite" aria-label="До старта Недели Технолидерства">
+      <div class="cd-cell">
+        <span class="cd-num" id="cdDays">—</span>
+        <span class="cd-label">Дней</span>
+      </div>
+      <div class="cd-sep">·</div>
+      <div class="cd-cell">
+        <span class="cd-num" id="cdHours">—</span>
+        <span class="cd-label">Часов</span>
+      </div>
+      <div class="cd-sep">·</div>
+      <div class="cd-cell">
+        <span class="cd-num" id="cdMins">—</span>
+        <span class="cd-label">Минут</span>
+      </div>
+      <div class="cd-sep">·</div>
+      <div class="cd-cell">
+        <span class="cd-num" id="cdSecs">—</span>
+        <span class="cd-label">Секунд</span>
+      </div>
+    </div>
+
+    <div class="hero-cta-row reveal reveal-delay-4">
+      <a href="#register" class="btn btn-primary btn-lg">Занять место бесплатно</a>
+      <a href="#program" class="btn btn-ghost-light btn-lg">Программа недели</a>
+    </div>
+
+    <div class="hero-trust reveal reveal-delay-5">
+      <div class="hero-trust-item">
+        <div class="hero-trust-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 6v6c0 5 3.5 9.5 8 10 4.5-.5 8-5 8-10V6l-8-4z"/><path d="m9 12 2 2 4-4"/></svg>
+        </div>
+        <div class="hero-trust-text"><b>14 экспертов</b>отрасли</div>
+      </div>
+      <div class="hero-trust-item">
+        <div class="hero-trust-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h18v18H3z"/><path d="M3 9h18M9 21V9"/></svg>
+        </div>
+        <div class="hero-trust-text"><b>21 эфир</b>с прямыми ответами</div>
+      </div>
+      <div class="hero-trust-item">
+        <div class="hero-trust-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg>
+        </div>
+        <div class="hero-trust-text"><b>0 ₽</b>участие и записи</div>
+      </div>
+    </div>
+   </div>
+  </div>
+
+  <div class="hero-scroll">
+    <span>Листайте</span>
+    <div class="hero-scroll-line"></div>
+  </div>
+</section>
+
+<!-- ============ PROBLEMS ============ -->
+<section class="problems" id="problems">
+  <div class="container">
+    <header class="problems-head reveal">
+      <p class="kicker">Знакомые мысли</p>
+      <h2>Каждый родитель сталкивается с одними и&nbsp;теми же вопросами</h2>
+      <p class="lead">Технологии меняются быстрее школьной программы. Курсов, кружков и&nbsp;школ — сотни. Невозможно проверить каждого преподавателя и&nbsp;каждое направление лично.</p>
+    </header>
+
+    <div class="problems-grid">
+      <article class="worry reveal">
+        <p class="worry-quote">«Я не понимаю, что сейчас актуально, а что устарело»</p>
+        <p class="worry-body">Школьная программа отстает от индустрии на 5–10 лет. Родителю самому сложно понять, какие направления в IT, робототехнике и инженерии действительно перспективны.</p>
+      </article>
+
+      <article class="worry reveal reveal-delay-1">
+        <p class="worry-quote">«А вдруг мы потратим год не на то?»</p>
+        <p class="worry-body">Курс длится 6–12 месяцев, стоит десятки тысяч. Если он не подошел — теряется и&nbsp;время ребенка, и&nbsp;мотивация, и&nbsp;деньги семьи.</p>
+      </article>
+
+      <article class="worry reveal reveal-delay-2">
+        <p class="worry-quote">«Не знаю, к кому обратиться за честным советом»</p>
+        <p class="worry-body">Любая школа продает себя. Друзья советуют то, что нравится их детям. Хочется услышать человека из индустрии, который не привязан к одному курсу.</p>
+      </article>
+
+      <article class="worry wide reveal reveal-delay-3">
+        <p class="worry-quote">«Хочется один раз во всем разобраться — спокойно и без манипуляций»</p>
+        <p class="worry-body">Не реклама курсов. Не агрессивные продажи. Не громкие обещания «получите профессию за месяц». А&nbsp;спокойный разговор с&nbsp;инженерами, преподавателями и&nbsp;наставниками — теми, кто работает с&nbsp;детьми и&nbsp;технологиями каждый день.</p>
+      </article>
+
+      <article class="worry reveal reveal-delay-4">
+        <p class="worry-quote">«Ребенок что-то делает — но непонятно, куда это ведет»</p>
+        <p class="worry-body">Олимпиады, кружки, тесты, курсы&nbsp;— но&nbsp;где видна общая траектория? Где можно увидеть прогресс и&nbsp;понять следующий шаг?</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROMISE (what week solves) ============ -->
+<section class="promise">
+  <div class="container">
+    <header class="promise-head">
+      <div class="reveal">
+        <p class="kicker">Что закроет неделя</p>
+        <h2>За 7 дней вы получите ясную картину технологического образования</h2>
+      </div>
+      <p class="lead reveal reveal-delay-1">Не реклама и не &laquo;продажа курсов&raquo;. Эксперты отвечают на конкретные вопросы родителей — на прямом эфире, лично, без подготовленных сценариев.</p>
+    </header>
+
+    <div class="promise-grid">
+      <article class="solve reveal">
+        <div class="solve-num">01</div>
+        <div class="solve-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="9"/></svg>
+        </div>
+        <h3>Поймете направления</h3>
+        <p>Карта 13 направлений технологического образования: что это, кому подходит, как пробовать без обязательств.</p>
+      </article>
+
+      <article class="solve reveal reveal-delay-1">
+        <div class="solve-num">02</div>
+        <div class="solve-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l3-9 4 18 3-9h4"/></svg>
+        </div>
+        <h3>Узнаете критерии</h3>
+        <p>Как отличить хорошую школу от плохой, на что смотреть в&nbsp;программе курса и&nbsp;какие вопросы задавать преподавателю.</p>
+      </article>
+
+      <article class="solve reveal reveal-delay-2">
+        <div class="solve-num">03</div>
+        <div class="solve-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <h3>Зададите свой вопрос</h3>
+        <p>Каждый эфир — это диалог. Можно прислать вопрос заранее или задать в&nbsp;чате. Эксперт отвечает в&nbsp;эфире.</p>
+      </article>
+
+      <article class="solve reveal reveal-delay-3">
+        <div class="solve-num">04</div>
+        <div class="solve-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15 8 22 9 17 14 18 21 12 18 6 21 7 14 2 9 9 8 12 2"/></svg>
+        </div>
+        <h3>Получите карту</h3>
+        <p>Личный кабинет на Платформе Технолидерства, Кулибинская карта и&nbsp;100 приветственных баллов&nbsp;— сразу после регистрации.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROGRAM ============ -->
+<section class="program" id="program">
+  <div class="program-inner">
+    <div class="container">
+      <header class="program-head reveal">
+        <p class="kicker">Программа</p>
+        <h2>Семь дней — семь тем технологического&nbsp;образования</h2>
+        <p class="lead">Каждый день&nbsp;— одна тема, три эфира: обзорный для родителей, экспертная глубина, разбор реальных кейсов.</p>
+      </header>
+
+      <div class="program-days">
+        <article class="day reveal">
+          <div class="day-date">Пн</div>
+          <div class="day-num">16</div>
+          <div class="day-weekday">июня</div>
+          <div class="day-topic">Как устроено технологическое образование сегодня</div>
+          <div class="day-meta"><span>3 эфира</span><span>+50 баллов</span></div>
+        </article>
+
+        <article class="day reveal reveal-delay-1">
+          <div class="day-date">Вт</div>
+          <div class="day-num">17</div>
+          <div class="day-weekday">июня</div>
+          <div class="day-topic">Программирование, ИТ и&nbsp;искусственный интеллект</div>
+          <div class="day-meta"><span>3 эфира</span><span>+50 баллов</span></div>
+        </article>
+
+        <article class="day reveal reveal-delay-2">
+          <div class="day-date">Ср</div>
+          <div class="day-num">18</div>
+          <div class="day-weekday">июня</div>
+          <div class="day-topic">Робототехника и&nbsp;инженерия: куда смотреть с&nbsp;7&nbsp;лет</div>
+          <div class="day-meta"><span>3 эфира</span><span>+50 баллов</span></div>
+        </article>
+
+        <article class="day reveal reveal-delay-3">
+          <div class="day-date">Чт</div>
+          <div class="day-num">19</div>
+          <div class="day-weekday">июня</div>
+          <div class="day-topic">Биотех, химия, материалы будущего</div>
+          <div class="day-meta"><span>3 эфира</span><span>+50 баллов</span></div>
+        </article>
+
+        <article class="day reveal reveal-delay-4">
+          <div class="day-date">Пт</div>
+          <div class="day-num">20</div>
+          <div class="day-weekday">июня</div>
+          <div class="day-topic">Профориентация: тесты, олимпиады, олимпиадные школы</div>
+          <div class="day-meta"><span>3 эфира</span><span>+50 баллов</span></div>
+        </article>
+
+        <article class="day reveal reveal-delay-5">
+          <div class="day-date">Сб</div>
+          <div class="day-num">21</div>
+          <div class="day-weekday">июня</div>
+          <div class="day-topic">Семейный формат: как поддержать ребенка</div>
+          <div class="day-meta"><span>3 эфира</span><span>+50 баллов</span></div>
+        </article>
+
+        <article class="day reveal reveal-delay-6">
+          <div class="day-date">Вс</div>
+          <div class="day-num">22</div>
+          <div class="day-weekday">июня</div>
+          <div class="day-topic">Карта траектории и&nbsp;следующий шаг</div>
+          <div class="day-meta"><span>3 эфира</span><span>+50 баллов</span></div>
+        </article>
+      </div>
+
+      <div class="program-cta reveal reveal-delay-7">
+        <a href="#register" class="btn btn-lg">Получить полную программу</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ KULIBIN CARD ============ -->
+<section class="kulibin" id="card">
+  <div class="container">
+    <div class="kulibin-grid">
+      <div class="kulibin-text reveal">
+        <p class="kicker">Подарок участникам</p>
+        <h2>Кулибинская&nbsp;карта — ваш бортовой журнал на&nbsp;платформе</h2>
+        <p class="lead">Каждый зарегистрированный участник недели получает личный кабинет и&nbsp;Кулибинскую карту с&nbsp;100 приветственными баллами. Активное участие&nbsp;— еще баллы. Баллы конвертируются в&nbsp;то, что нельзя купить за&nbsp;деньги.</p>
+
+        <ul class="kulibin-benefits">
+          <li class="kulibin-benefit reveal reveal-delay-1">
+            <div class="benefit-num">+100</div>
+            <div class="benefit-body">
+              <b>Приветственно за регистрацию</b>
+              <span>Баллы зачисляются сразу. Никаких ограничений по&nbsp;срокам, активации, дополнительным шагам.</span>
+            </div>
+          </li>
+          <li class="kulibin-benefit reveal reveal-delay-2">
+            <div class="benefit-num">+50</div>
+            <div class="benefit-body">
+              <b>За каждый посещенный эфир</b>
+              <span>Просто включаете эфир в&nbsp;нужное время. За&nbsp;неделю это до&nbsp;1&nbsp;050 баллов — больше, чем нужно для&nbsp;15&nbsp;минут с&nbsp;экспертом.</span>
+            </div>
+          </li>
+          <li class="kulibin-benefit reveal reveal-delay-3">
+            <div class="benefit-num">+20</div>
+            <div class="benefit-body">
+              <b>За вопрос эксперту в эфире</b>
+              <span>Хороший вопрос — это часть разговора. Эксперты часто разворачивают вокруг вопросов целую тему.</span>
+            </div>
+          </li>
+          <li class="kulibin-benefit reveal reveal-delay-4">
+            <div class="benefit-num">+50</div>
+            <div class="benefit-body">
+              <b>За отзыв об эфире</b>
+              <span>Один абзац о&nbsp;том, что было полезно. Помогает нам сделать программу лучше для&nbsp;других семей.</span>
+            </div>
+          </li>
+        </ul>
+
+        <p class="lead" style="font-size:15.5px;color:var(--midnight-300)">Что можно открыть баллами: чат с&nbsp;экспертами (150), личные 15 минут с&nbsp;экспертом по&nbsp;выбору (500), рекомендательное письмо в&nbsp;школу или олимпиаду (800). Баллы не&nbsp;сгорают&nbsp;— карта помнит каждое ваше действие на&nbsp;платформе.</p>
+      </div>
+
+      <div class="kulibin-stage" id="kulibinStage">
+        <div class="kulibin-particles">
+          <span class="particle p1"></span>
+          <span class="particle p2"></span>
+          <span class="particle p3"></span>
+          <span class="particle p4"></span>
+          <span class="particle p5"></span>
+        </div>
+
+        <div class="kulibin-card" id="kulibinCard">
+          <div class="kulibin-card-glow"></div>
+          <img class="kulibin-card-img" src="kulibin-card.svg" alt="Кулибинская карта — бортовой журнал участника Платформы Технолидерства" loading="lazy">
+          <div class="kulibin-card-holo"></div>
+        </div>
+
+        <!-- Floating bonus chips -->
+        <div class="bonus-chip bonus-chip-a">
+          <div class="bonus-chip-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15 8 22 9 17 14 18 21 12 18 6 21 7 14 2 9 9 8 12 2"/></svg>
+          </div>
+          <div>
+            <div class="bonus-chip-amount">+100</div>
+            <small class="bonus-chip-label">регистрация</small>
+          </div>
+        </div>
+
+        <div class="bonus-chip bonus-chip-b">
+          <div class="bonus-chip-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="14" rx="2"/><path d="m17 2-5 5-5-5"/></svg>
+          </div>
+          <div>
+            <div class="bonus-chip-amount">+50</div>
+            <small class="bonus-chip-label">эфир</small>
+          </div>
+        </div>
+
+        <div class="bonus-chip bonus-chip-c">
+          <div class="bonus-chip-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          </div>
+          <div>
+            <div class="bonus-chip-amount">+20</div>
+            <small class="bonus-chip-label">вопрос</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ROADMAP ============ -->
+<section class="roadmap" id="roadmap">
+  <div class="container">
+    <header class="roadmap-head reveal">
+      <p class="kicker">Как это работает</p>
+      <h2>Пять простых шагов — без переплат и&nbsp;обязательств</h2>
+    </header>
+
+    <div class="roadmap-track">
+      <div class="roadmap-line"></div>
+
+      <div class="step is-first reveal">
+        <div class="step-circle">1</div>
+        <h4>Регистрация</h4>
+        <p>Email и&nbsp;имя. Письмо со&nbsp;ссылкой на&nbsp;кабинет — за&nbsp;минуту.</p>
+      </div>
+
+      <div class="step reveal reveal-delay-1">
+        <div class="step-circle">2</div>
+        <h4>Карта в кабинете</h4>
+        <p>100 приветственных баллов уже на&nbsp;Кулибинской карте.</p>
+      </div>
+
+      <div class="step reveal reveal-delay-2">
+        <div class="step-circle">3</div>
+        <h4>Эфиры недели</h4>
+        <p>16&ndash;22&nbsp;июня. Включаете в&nbsp;удобное время. Есть записи.</p>
+      </div>
+
+      <div class="step reveal reveal-delay-3">
+        <div class="step-circle">4</div>
+        <h4>Накопление</h4>
+        <p>За каждое действие&nbsp;— баллы. Видны в&nbsp;истории кабинета.</p>
+      </div>
+
+      <div class="step reveal reveal-delay-4">
+        <div class="step-circle">5</div>
+        <h4>Обмен</h4>
+        <p>Чат, минуты с&nbsp;экспертом, рекомендательное письмо ребенку.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERTS ============ -->
+<section class="experts">
+  <div class="container">
+    <header class="experts-head reveal">
+      <p class="kicker">С вами на эфирах</p>
+      <h2>14 экспертов из&nbsp;индустрии, вузов и&nbsp;наставничества</h2>
+      <p class="lead" style="margin: var(--sp-3) auto 0;">Инженеры, преподаватели, наставники кружков и&nbsp;олимпиадных школ. Каждый отвечает на&nbsp;вопросы родителей лично, в&nbsp;прямом эфире.</p>
+    </header>
+
+    <div class="experts-grid">
+      <article class="expert reveal">
+        <div class="expert-avatar">АП</div>
+        <div>
+          <h3>Анна Петрова</h3>
+          <div class="expert-role">Преподаватель робототехники</div>
+        </div>
+        <p>20+ лет в&nbsp;инженерном образовании, наставник 30+ призеров олимпиад. Расскажет, с&nbsp;чего начать кружок робототехники&nbsp;— и&nbsp;где грань между серьезным и&nbsp;игрушечным.</p>
+        <span class="expert-tag">робототехника · 7+</span>
+      </article>
+
+      <article class="expert reveal reveal-delay-1">
+        <div class="expert-avatar">АС</div>
+        <div>
+          <h3>Андрей Светлов</h3>
+          <div class="expert-role">Lead-инженер, ML-команда</div>
+        </div>
+        <p>Работает в&nbsp;индустрии 12&nbsp;лет, ведет наставничество подростков. Поможет понять, что такое современный искусственный интеллект&nbsp;— и&nbsp;зачем он&nbsp;школьнику.</p>
+        <span class="expert-tag">ИИ · 12+</span>
+      </article>
+
+      <article class="expert reveal reveal-delay-2">
+        <div class="expert-avatar">МК</div>
+        <div>
+          <h3>Михаил Карташов</h3>
+          <div class="expert-role">Кандидат наук, биоинженерия</div>
+        </div>
+        <p>Преподает в&nbsp;вузе, ведет летние школы. Объяснит, что такое биотех на&nbsp;понятном языке и&nbsp;куда смотреть, если ребенок любит биологию и&nbsp;химию.</p>
+        <span class="expert-tag">биотех · 14+</span>
+      </article>
+
+      <article class="expert reveal reveal-delay-3">
+        <div class="expert-avatar">ЕС</div>
+        <div>
+          <h3>Елена Савицкая</h3>
+          <div class="expert-role">Профориентолог, методолог</div>
+        </div>
+        <p>15&nbsp;лет работы с&nbsp;семьями. Помогает разобрать тесты профориентации, отличить настоящие сильные стороны ребенка от&nbsp;временного увлечения.</p>
+        <span class="expert-tag">профориентация · 10+</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="faq-grid">
+      <header class="faq-head reveal">
+        <p class="kicker">Частые вопросы</p>
+        <h2>Что нужно знать до регистрации</h2>
+        <p>Если ответа нет&nbsp;— напишите в&nbsp;поддержку, ответим в&nbsp;течение часа.</p>
+      </header>
+
+      <div class="faq-list">
+        <article class="faq-item is-open reveal">
+          <button class="faq-q">Это бесплатно? Точно нет скрытой подписки?
+            <span class="faq-q-plus"></span>
+          </button>
+          <div class="faq-a">
+            <div class="faq-a-inner">Да, полностью бесплатно. Никаких карт, оплат, автоматических подписок. Регистрация занимает минуту, эфиры доступны сразу&nbsp;— онлайн в&nbsp;дни недели и&nbsp;в&nbsp;записи после. Записи остаются в&nbsp;вашем кабинете навсегда.</div>
+          </div>
+        </article>
+
+        <article class="faq-item reveal reveal-delay-1">
+          <button class="faq-q">Что если я&nbsp;не&nbsp;смогу смотреть в&nbsp;прямом эфире?
+            <span class="faq-q-plus"></span>
+          </button>
+          <div class="faq-a">
+            <div class="faq-a-inner">Все эфиры записываются. Запись появляется в&nbsp;вашем личном кабинете в&nbsp;течение часа после окончания. За&nbsp;просмотр записи баллы тоже начисляются&nbsp;— только в&nbsp;меньшем объеме (за прямой эфир +50, за&nbsp;запись +20).</div>
+          </div>
+        </article>
+
+        <article class="faq-item reveal reveal-delay-2">
+          <button class="faq-q">Что такое Кулибинская карта и&nbsp;зачем она&nbsp;нужна?
+            <span class="faq-q-plus"></span>
+          </button>
+          <div class="faq-a">
+            <div class="faq-a-inner">Это ваш бортовой журнал на&nbsp;Платформе Технолидерства. Карта появляется автоматически после регистрации, на&nbsp;ней&nbsp;— 100 приветственных баллов. За&nbsp;участие в&nbsp;неделе можно добавить еще до&nbsp;1&nbsp;200&nbsp;баллов. Баллы обмениваются на&nbsp;то, что не&nbsp;купить за&nbsp;деньги: 15&nbsp;минут с&nbsp;экспертом, рекомендательное письмо ребенку, доступ к&nbsp;закрытым мастер-классам.</div>
+          </div>
+        </article>
+
+        <article class="faq-item reveal reveal-delay-3">
+          <button class="faq-q">Будут ли&nbsp;на&nbsp;эфирах продавать курсы?
+            <span class="faq-q-plus"></span>
+          </button>
+          <div class="faq-a">
+            <div class="faq-a-inner">Нет. Эксперты приглашены за&nbsp;экспертизу, а&nbsp;не&nbsp;за&nbsp;продажу. На&nbsp;эфирах разбираются критерии выбора, направления, возрастные пороги, что искать в&nbsp;программе кружка. Конкретные школы и&nbsp;курсы упоминаются только как примеры, когда родитель спрашивает напрямую.</div>
+          </div>
+        </article>
+
+        <article class="faq-item reveal reveal-delay-4">
+          <button class="faq-q">У&nbsp;нас разные возрасты у&nbsp;детей. Подойдет?
+            <span class="faq-q-plus"></span>
+          </button>
+          <div class="faq-a">
+            <div class="faq-a-inner">Да. Неделя построена так, чтобы быть полезной для&nbsp;семей с&nbsp;детьми от&nbsp;7&nbsp;до&nbsp;17&nbsp;лет. Каждый эфир помечен возрастной рекомендацией. Есть отдельный день про&nbsp;семейный формат участия (21&nbsp;июня)&nbsp;— как поддержать ребенка, не&nbsp;навязывая.</div>
+          </div>
+        </article>
+
+        <article class="faq-item reveal reveal-delay-5">
+          <button class="faq-q">А&nbsp;что если ребенок пока вообще не&nbsp;интересуется технологиями?
+            <span class="faq-q-plus"></span>
+          </button>
+          <div class="faq-a">
+            <div class="faq-a-inner">Это нормальная ситуация. Неделя&nbsp;— не&nbsp;для&nbsp;того, чтобы превратить ребенка в&nbsp;программиста, а&nbsp;для&nbsp;того, чтобы родитель видел поле возможностей. Технологическое образование&nbsp;— это не&nbsp;только код: это инженерия, материалы, биотех, профориентация. Ребенок сам выберет&nbsp;— или&nbsp;не&nbsp;выберет&nbsp;— что ему интересно.</div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="final" id="register">
+  <div class="container">
+    <div class="final-card reveal">
+      <div class="final-inner">
+        <p class="kicker">Старт 16 июня</p>
+        <h2>Сделайте первый шаг<br>спокойно и&nbsp;<span class="hl">в&nbsp;своем темпе</span></h2>
+        <p class="lead">Регистрация занимает минуту. 100 баллов&nbsp;— сразу. Эфиры&nbsp;— по&nbsp;желанию. Записи&nbsp;— навсегда.</p>
+
+        <ul class="final-bullets">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Бесплатное участие
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Кулибинская карта в&nbsp;подарок
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Записи всех эфиров навсегда
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Личный кабинет на&nbsp;платформе
+          </li>
+        </ul>
+
+        <div class="final-cta-row">
+          <a href="#register" class="btn btn-primary btn-lg">Занять место бесплатно</a>
+          <a href="#program" class="btn btn-ghost-light btn-lg">Сначала посмотреть программу</a>
+        </div>
+
+        <p class="final-foot">Без обязательств · отписаться можно в&nbsp;любой момент в&nbsp;кабинете</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="#" class="brand">Платформа&nbsp;Технолидерства<span class="accent">.</span></a>
+        <p>Образовательная экосистема технологического лидерства</p>
+      </div>
+
+      <nav class="footer-links">
+        <a href="#program">Программа</a>
+        <a href="#card">Карта</a>
+        <a href="#faq">Вопросы</a>
+        <a href="#">Контакты</a>
+        <a href="#">Политика</a>
+      </nav>
+    </div>
+
+    <div class="footer-copy">© 2026 Платформа Технолидерства · все эфиры бесплатны</div>
+  </div>
+</footer>
+
+<!-- ============ Mobile sticky CTA ============ -->
+<div class="mobile-cta" id="mobileCta">
+  <a href="#register" class="btn btn-primary">Зарегистрироваться · 100 баллов</a>
+</div>
+
+<script>
+(function() {
+  'use strict';
+
+  // ============ Intersection reveal ============
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+  // Roadmap line reveals when section enters
+  const roadmap = document.querySelector('.roadmap');
+  if (roadmap) {
+    new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          roadmap.classList.add('is-visible');
+        }
+      });
+    }, { threshold: 0.3 }).observe(roadmap);
+  }
+
+  // ============ Topbar hide on scroll down, show on up ============
+  const topbar = document.getElementById('topbar');
+  const mobileCta = document.getElementById('mobileCta');
+  let lastY = 0;
+  let ticking = false;
+
+  function onScroll() {
+    const y = window.scrollY;
+    if (y > lastY && y > 240) {
+      topbar.classList.add('is-hidden');
+    } else {
+      topbar.classList.remove('is-hidden');
+    }
+    if (y > 600) mobileCta.classList.add('is-visible');
+    else mobileCta.classList.remove('is-visible');
+    lastY = y;
+    ticking = false;
+  }
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(onScroll);
+      ticking = true;
+    }
+  }, { passive: true });
+
+  // ============ Hero parallax (image + glow + dates card) ============
+  const heroBg = document.getElementById('heroBg');
+  const heroDates = document.getElementById('heroDates');
+  const heroGlowA = document.getElementById('heroGlowA');
+  const heroGlowB = document.getElementById('heroGlowB');
+  const hero = document.querySelector('.hero');
+
+  let mouseX = 0, mouseY = 0;
+  let targetX = 0, targetY = 0;
+
+  function lerp(a, b, t) { return a + (b - a) * t; }
+
+  hero.addEventListener('mousemove', (e) => {
+    const r = hero.getBoundingClientRect();
+    targetX = ((e.clientX - r.left) / r.width - 0.5) * 2;
+    targetY = ((e.clientY - r.top) / r.height - 0.5) * 2;
+  });
+
+  hero.addEventListener('mouseleave', () => {
+    targetX = 0; targetY = 0;
+  });
+
+  function animateHero() {
+    mouseX = lerp(mouseX, targetX, 0.08);
+    mouseY = lerp(mouseY, targetY, 0.08);
+
+    const scrollOffset = Math.min(window.scrollY, 800);
+
+    if (heroBg && heroBg.firstElementChild) {
+      const img = heroBg.firstElementChild;
+      img.style.transform = `translate3d(${mouseX * -8}px, ${mouseY * -6 + scrollOffset * 0.25}px, 0) scale(${1.05 + scrollOffset * 0.0002})`;
+    }
+    if (heroGlowA) {
+      heroGlowA.style.transform = `translate3d(${mouseX * 30}px, ${mouseY * 20}px, 0)`;
+    }
+    if (heroGlowB) {
+      heroGlowB.style.transform = `translate3d(${mouseX * -25}px, ${mouseY * -18}px, 0)`;
+    }
+    if (heroDates) {
+      heroDates.style.transform = `translate3d(${mouseX * -12}px, ${mouseY * -8}px, 0) rotate(-1.5deg)`;
+    }
+    requestAnimationFrame(animateHero);
+  }
+  animateHero();
+
+  // ============ Kulibin card 3D mouse parallax ============
+  const stage = document.getElementById('kulibinStage');
+  const card = document.getElementById('kulibinCard');
+
+  if (stage && card) {
+    stage.addEventListener('mousemove', (e) => {
+      const r = stage.getBoundingClientRect();
+      const x = ((e.clientX - r.left) / r.width - 0.5) * 2;
+      const y = ((e.clientY - r.top) / r.height - 0.5) * 2;
+      card.style.transform = `rotateY(${-12 + x * 10}deg) rotateX(${8 - y * 8}deg) translateZ(20px)`;
+    });
+    stage.addEventListener('mouseleave', () => {
+      card.style.transform = '';
+    });
+  }
+
+  // ============ Burger / mobile drawer ============
+  const burger = document.getElementById('burger');
+  const drawer = document.getElementById('topnavMobile');
+  if (burger && drawer) {
+    burger.addEventListener('click', () => {
+      const open = burger.classList.toggle('is-open');
+      drawer.classList.toggle('is-open', open);
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    drawer.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        burger.classList.remove('is-open');
+        drawer.classList.remove('is-open');
+        burger.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
+  // ============ FAQ accordion ============
+  document.querySelectorAll('.faq-item').forEach(item => {
+    const btn = item.querySelector('.faq-q');
+    btn.addEventListener('click', () => {
+      item.classList.toggle('is-open');
+    });
+  });
+
+  // ============ Topbar countdown (days only) ============
+  const cd = document.getElementById('countdown');
+  function pluralizeDays(n) {
+    const mod10 = n % 10, mod100 = n % 100;
+    if (mod10 === 1 && mod100 !== 11) return 'день';
+    if (mod10 >= 2 && mod10 <= 4 && (mod100 < 12 || mod100 > 14)) return 'дня';
+    return 'дней';
+  }
+  if (cd) {
+    function updateTopbar() {
+      const target = new Date('2026-06-16T10:00:00+03:00');
+      const now = new Date();
+      const diff = Math.max(0, target - now);
+      const days = Math.floor(diff / 86400000);
+      cd.innerHTML = days > 0 ? `До старта <b>${days}</b> ${pluralizeDays(days)}` : `<b>Идет онлайн</b>`;
+    }
+    updateTopbar();
+    setInterval(updateTopbar, 60000);
+  }
+
+  // ============ Hero countdown (days/hours/minutes/seconds) ============
+  const cdDays = document.getElementById('cdDays');
+  const cdHours = document.getElementById('cdHours');
+  const cdMins = document.getElementById('cdMins');
+  const cdSecs = document.getElementById('cdSecs');
+  if (cdDays && cdHours && cdMins && cdSecs) {
+    const target = new Date('2026-06-16T10:00:00+03:00').getTime();
+    function pad(n) { return n < 10 ? '0' + n : '' + n; }
+    let prevSecs = null;
+    function tickHero() {
+      const now = Date.now();
+      const diff = Math.max(0, target - now);
+      const days = Math.floor(diff / 86400000);
+      const hours = Math.floor((diff / 3600000) % 24);
+      const mins = Math.floor((diff / 60000) % 60);
+      const secs = Math.floor((diff / 1000) % 60);
+      cdDays.textContent = days;
+      cdHours.textContent = pad(hours);
+      cdMins.textContent = pad(mins);
+      if (prevSecs !== secs) {
+        cdSecs.classList.add('is-flip');
+        setTimeout(() => cdSecs.classList.remove('is-flip'), 140);
+      }
+      cdSecs.textContent = pad(secs);
+      prevSecs = secs;
+    }
+    tickHero();
+    setInterval(tickHero, 1000);
+  }
+
+  // ============ Smooth scroll for anchor links ============
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', (e) => {
+      const id = a.getAttribute('href');
+      if (id.length > 1) {
+        const t = document.querySelector(id);
+        if (t) {
+          e.preventDefault();
+          const top = t.getBoundingClientRect().top + window.scrollY - 80;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>
